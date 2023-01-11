@@ -61,10 +61,30 @@
   }
 </script>
 <template >
-  <div>
-    
-  </div>
+  <header>
+    <div class="container">
+      <div class="row">
+        <div class="col-4">
+          <img src="../assets/img/dc-logo.png" alt="logo-primario">
+
+        </div>
+        <div class="col-6">
+
+        </div>
+      </div>
+
+    </div>
+  </header>
 </template>
-<style lang="">
-  
+<style lang="scss">
+  @use '../styles/partials/variabiles' as *;
+  header{
+    margin: $margin2rem;
+    .col-4{
+      width: 40%;
+    }
+    .col-6{
+      width: 60%;
+    }
+  }
 </style>
