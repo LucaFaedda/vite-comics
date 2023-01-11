@@ -5,51 +5,51 @@
         return{
           listaHeader: [
             {
-              nome: 'characters',
+              nome: 'CHARACTERS',
               status: false,
               url: '#'
             },
             {
-              nome: 'comics',
+              nome: 'COMICS',
               status: true,
               url: '#'
             },{
-              nome: 'movies',
+              nome: 'MOVIES',
               status: false,
               url: '#'
             },
             {
-              nome: 'tv',
+              nome: 'TV',
               status: false,
               url: '#'
             },
             {
-              nome: 'games',
+              nome: 'GAMES',
               status: false,
               url: '#'
             },
             {
-              nome: 'collectibles',
+              nome: 'COLLECTIBLES',
               status: false,
               url: '#'
             },
             {
-              nome: 'videos',
+              nome: 'VIDEOS',
               status: false,
               url: '#'
             },
             {
-              nome: 'fans',
+              nome: 'FANS',
               status: false,
               url: '#'
             },
             {
-              nome: 'news',
+              nome: 'NEWS',
               status: false,
               url: '#'
             },
             {
-              nome: 'shop',
+              nome: 'SHOP',
               status: false,
               url: '#'
             },
@@ -63,28 +63,58 @@
 <template >
   <header>
     <div class="container">
-      <div class="row">
+      <nav class="row">
         <div class="col-4">
           <img src="../assets/img/dc-logo.png" alt="logo-primario">
 
         </div>
         <div class="col-6">
+          <ul>
+            <li v-for="(item, index) in listaHeader" :key="index">
+              <a :href="item.url" :class="item.status ? 'active' : ''">{{ item.nome }}</a>
+            </li>
+          </ul>
 
         </div>
-      </div>
+      </nav>
 
     </div>
   </header>
 </template>
 <style lang="scss">
   @use '../styles/partials/variabiles' as *;
+  @use '../styles/partials/mixins' as *;
   header{
     margin: $margin2rem;
-    .col-4{
-      width: 40%;
-    }
-    .col-6{
-      width: 60%;
+    .row{
+      @include d-flex;
+      width: 100%;
+      align-items: center;
+
+      .col-4{
+        width: 40%;
+      }
+      .col-6{
+        width: 60%;
+
+        ul{
+          list-style: none;
+          @include d-flex;
+          li a{
+            margin: 0rem 0.75rem;
+            font-size: 20px;
+            font-weight: 500;
+            &.active, &:hover{
+              color: #0282f9;
+            }
+            &.active{
+              padding-bottom: 20px;
+              border-bottom: 3px solid;
+              border-spacing: 10px;
+            }
+          }
+        }
+      }
     }
   }
 </style>
