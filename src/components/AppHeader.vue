@@ -113,7 +113,6 @@
         display: flex;
         justify-content: flex-end;
         ul{
-          list-style: none;
           @include d-flex;
           li a{
             margin: 0rem 5px;
