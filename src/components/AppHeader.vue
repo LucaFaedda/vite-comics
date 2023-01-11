@@ -3,61 +3,73 @@
       name: 'AppHeader',
       data(){
         return{
+          itemActive: 0,
           listaHeader: [
             {
               nome: 'CHARACTERS',
-              status: false,
+              stato: false,
               url: '#'
             },
             {
               nome: 'COMICS',
-              status: true,
+              stato: true,
               url: '#'
             },{
               nome: 'MOVIES',
-              status: false,
+              stato: false,
               url: '#'
             },
             {
               nome: 'TV',
-              status: false,
+              stato: false,
               url: '#'
             },
             {
               nome: 'GAMES',
-              status: false,
+              stato: false,
               url: '#'
             },
             {
               nome: 'COLLECTIBLES',
-              status: false,
+              stato: false,
               url: '#'
             },
             {
               nome: 'VIDEOS',
-              status: false,
+              stato: false,
               url: '#'
             },
             {
               nome: 'FANS',
-              status: false,
+              stato: false,
               url: '#'
             },
             {
               nome: 'NEWS',
-              status: false,
+              stato: false,
               url: '#'
             },
             {
               nome: 'SHOP',
-              status: false,
+              stato: false,
               url: '#'
             },
   
           ]
 
         }
-      }
+      },
+      methods: {
+        activeItem()
+        {
+          if(stato == false){
+            stato = true
+          }
+          else{
+            stato = false
+          }
+        }
+      },
   }
 </script>
 <template >
@@ -71,7 +83,7 @@
         <div class="col-6">
           <ul>
             <li v-for="(item, index) in listaHeader" :key="index">
-              <a :href="item.url" :class="item.status ? 'active' : ''">{{ item.nome }}</a>
+              <a :href="item.url" :class="item.stato ? 'active' : ''" @click="activeItem()">{{ item.nome }}</a>
             </li>
           </ul>
 
@@ -86,28 +98,29 @@
   @use '../styles/partials/mixins' as *;
   header{
     margin: $margin2rem;
+    height: 100px;
     .row{
       @include d-flex;
       width: 100%;
       align-items: center;
+      justify-content: space-between;
 
       .col-4{
-        width: 40%;
+        width: 20%;
       }
       .col-6{
-        width: 60%;
-
+        width: 80%;
+        display: flex;
+        justify-content: flex-end;
         ul{
           list-style: none;
           @include d-flex;
           li a{
-            margin: 0rem 0.75rem;
-            font-size: 20px;
-            font-weight: 500;
-            &.active, &:hover{
-              color: #0282f9;
-            }
-            &.active{
+            margin: 0rem 5px;
+              &.active, &:hover{
+                color: #0282f9;
+              }
+              &.active{
               padding-bottom: 20px;
               border-bottom: 3px solid;
               border-spacing: 10px;
@@ -117,4 +130,5 @@
       }
     }
   }
+
 </style>
