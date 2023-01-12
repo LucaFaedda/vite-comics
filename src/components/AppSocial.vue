@@ -75,6 +75,12 @@
                     background-color: transparent;
                     color: $colorwhite;
                     font-size: 25px;
+                    cursor: pointer;
+                    &:hover{
+                        color: #303030;
+                        background-color: #0282f9;
+                        border: 1px solid#303030;
+                    }
                 }
             }
             .lista-social{
