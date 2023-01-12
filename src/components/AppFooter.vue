@@ -315,10 +315,10 @@
           display: flex;
           flex-direction: row-reverse;
           width: 60%;
+          position: relative;
           img{
-            width: 30%;
-            //position: absolute;
-            bottom: 0px;
+            position: absolute;
+            bottom: -85px;
             
           }
         }
