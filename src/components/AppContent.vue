@@ -20,9 +20,8 @@
     .content{
         height: 100px;
         background-color: #1c1c1c;
-        @include d-flex;
+        @include d-flex-center;
         justify-content: center;
-        align-items: center;
         flex-direction: row;
 
         .text-center{

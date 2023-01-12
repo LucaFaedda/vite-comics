@@ -61,10 +61,9 @@
         background-color: #303030;
         position: relative;
         .row{
-            @include d-flex;
+            @include d-flex-center;
             width: $width100;
             justify-content: space-between;
-            align-items: center;
             .pulsanti{
                 width: $width50;
                 margin: 4rem 0rem;

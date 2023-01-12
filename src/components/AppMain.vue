@@ -59,8 +59,7 @@
         position: relative;
         .container{
             ul{
-                @include d-flex;
-                align-items: center;
+                @include d-flex-center;
                 margin: $margin4rem;
                 li{
                     @include d-flex;

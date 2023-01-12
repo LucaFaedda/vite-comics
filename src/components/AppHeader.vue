@@ -83,7 +83,7 @@
         <div class="col-6">
           <ul>
             <li v-for="(item, index) in listaHeader" :key="index">
-              <a :href="item.url" :class="item.stato ? 'active' : ''" @click="activeItem()">{{ item.nome }}</a>
+              <a :href="item.url" :class="item.stato ? 'active' : ''" @click="item.stato ? false : true">{{ item.nome }}</a>
             </li>
           </ul>
 
@@ -93,17 +93,17 @@
     </div>
   </header>
 </template>
-<style lang="scss" >
+<style lang="scss" scoped >
   @use '../styles/partials/variabiles' as *;
   @use '../styles/partials/mixins' as *;
   header{
     margin: $margin2rem;
     height: 100px;
     .row{
-      @include d-flex;
+      @include d-flex-center;
       width: 100%;
-      align-items: center;
       justify-content: space-between;
+      height: 100%;
 
       .col-4{
         width: 20%;
@@ -112,10 +112,13 @@
         width: 80%;
         display: flex;
         justify-content: flex-end;
+        height: 100%;
         ul{
           @include d-flex;
+          height: 100%;
           li a{
             margin: 0rem 5px;
+            height: 100%;
               &.active, &:hover{
                 color: #0282f9;
               }

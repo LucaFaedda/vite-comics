@@ -24,5 +24,6 @@ import AppSocial from './components/AppSocial.vue'
   </div>
 </template>
 <style lang="scss" >
+// lo scoped non va in App.vue
   @use './styles/generals.scss' as*;
 </style>
