@@ -120,7 +120,7 @@
             margin: 0rem 5px;
             height: 100%;
               &.active, &:hover{
-                color: #0282f9;
+                color: $primarycolor;
               }
               &.active{
               padding-bottom: 20px;

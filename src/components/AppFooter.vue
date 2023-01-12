@@ -114,12 +114,72 @@
           nome: 'Shop DC Collections',
           href: '#'
         },
-      ]
+      ],
+      iconsArray:[
+                    {
+                        nome: 'DIGITAL COMICS',
+                        href: '#',
+                        img: '../src/assets/img/buy-comics-digital-comics.png'
+                    },
+                    {
+                        nome: 'DC MERCHANDASIE',
+                        href: '#',
+                        img: '../src/assets/img/buy-comics-merchandise.png'
+                    },
+                    {
+                        nome: 'SUBSCRIPTION',
+                        href: '#',
+                        img: '../src/assets/img/buy-comics-subscriptions.png'
+                    },
+                    {
+                        nome: 'COMIC SHOP LOCATION',
+                        href: '#',
+                        img: '../src/assets/img/buy-comics-shop-locator.png'
+                    },
+                    {
+                        nome: 'DC POWER VISA',
+                        href: '#',
+                        img: '../src/assets/img/buy-dc-power-visa.svg'
+                    },
+                ],
+                arraySocial:[
+                {
+                    img: '../src/assets/img/footer-facebook.png',
+                    href:'#'
+                },
+                {
+                    img: '../src/assets/img/footer-twitter.png',
+                    href:'#'
+                },
+                {
+                    img: '../src/assets/img/footer-youtube.png',
+                    href:'#'
+                },
+                {
+                    img: '../src/assets/img/footer-pinterest.png',
+                    href:'#'
+                },
+                {
+                    img: '../src/assets/img/footer-periscope.png',
+                    href:'#'
+                },
+
+            ] // nelle img andava src??? 
       }
     }
   }
 </script>
 <template>
+   <div class="icons">
+        <div class="container">
+            <ul>
+                <li v-for="(item, index) in iconsArray" :key="index">
+                <img :src="item.img">
+                <a :href="item.href">{{item.nome}}</a>
+                </li>
+            </ul>      
+        </div>
+    </div>
   <footer>
     <div class="container">
       <div class="row">
@@ -166,10 +226,63 @@
     </div>
         
   </footer>
+  <div class="bk-grey">
+        <div class="container">
+            <div class="row">
+                <div class="pulsanti">
+                    <button>SIGN-UP NOW!</button>
+                </div>
+                <div class="lista-social">
+                    <ul>
+                        <li><h2>Follows us</h2></li>
+                        <li v-for="(item, index) in arraySocial" :key="index">
+                            <a :href="item.href">
+                                <img :src="item.img">
+                            </a>
+                        </li>
+                    </ul>
+                    
+                </div>
+            </div>
+
+        </div>
+    
+    </div>
 </template>
-<style lang="scss" >
+<style lang="scss" scoped >
     @use '../styles/partials/variabiles' as *;
     @use '../styles/partials/mixins' as *;
+    .icons{
+        @include d-flex;
+        justify-content: space-around;
+        background-color:$primarycolor;
+        position: relative;
+        .container{
+            ul{
+                @include d-flex-center;
+                margin: $margin4rem;
+                li{
+                    @include d-flex;
+                    align-items:center;
+                    margin-right: 20px;
+                    img{
+                        width: 2.5rem;
+                        margin: 0px 10px;
+                        &:hover{
+                            filter: invert(100);
+                        }
+                    }
+                    a{
+                        font-size: 14px;
+                        color: $colorwhite;
+                        &:hover{
+                            color:#000
+                        }
+                    }
+                }
+            }
+        }
+    }
     footer{
       background-image: url('../assets/img/footer-bg.jpg');
       background-size: cover;
@@ -207,6 +320,46 @@
           }
         }
       }
+    }
+    .bk-grey{
+        background-color: #303030;
+        position: relative;
+        .row{
+            @include d-flex-center;
+            width: $width100;
+            justify-content: space-between;
+            .pulsanti{
+                width: $width50;
+                margin: 2rem 0rem;
+                display: flex;
+                button{
+                    padding: 15px;
+                    border: 1px solid $primarycolor;
+                    background-color: transparent;
+                    color: $colorwhite;
+                    font-size: 25px;
+                    cursor: pointer;
+                    &:hover{
+                        color: #303030;
+                        background-color: $primarycolor;
+                        border: 1px solid#303030;
+                    }
+                }
+            }
+            .lista-social{
+                ul{
+                    @include d-flex;
+                    li:first-child{
+                        color:$primarycolor;
+                    }
+                    li{
+                        margin:0.5rem;
+                    }
+                }
+            }
+            
+        }
+
     }
     
 </style>
