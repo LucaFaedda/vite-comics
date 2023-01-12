@@ -45,6 +45,7 @@
           .card-container{
             display: flex;
             flex-wrap: wrap;
+            padding: 2rem;
           }
         }
     }
