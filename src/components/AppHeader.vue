@@ -63,10 +63,10 @@
         activeItem()
         {
           if(stato == false){
-            stato = true
+            stato == true
           }
           else{
-            stato = false
+            stato == false
           }
         }
       },
@@ -93,7 +93,7 @@
     </div>
   </header>
 </template>
-<style lang="scss">
+<style lang="scss" scoped>
   @use '../styles/partials/variabiles' as *;
   @use '../styles/partials/mixins' as *;
   header{
