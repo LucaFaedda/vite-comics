@@ -125,34 +125,35 @@
       <div class="row">
         <div class="col-4">
           <div>
-
             <ul>
+              <li><h2>DC comics</h2></li>
               <li v-for="(item, index) in DcComicsArray" :key="index">
-                <h3 class="mb-1rem">{{ item.titolo }}</h3>
                 <a :href="item.href">{{ item.nome }}</a>
               </li>
             </ul>
             <ul>
+              <li><h2>Shop</h2></li>
               <li v-for="(item, index) in ShopArray" :key="index">
-                <h3 class="mb-1rem">{{ item.titolo }}</h3>
                 <a :href="item.href">{{ item.nome }}</a>
               </li>
             </ul>
           </div>
-          <ul>
-            <li v-for="(item, index) in DcArray" :key="index">
-              <h3 class="mb-1rem">{{ item.titolo }}</h3>
-              <a :href="item.href">{{ item.nome }}</a>
-            </li>
-          </ul>
-          <ul>
-            <li v-for="(item, index) in SitesArray" :key="index">
-              <h3 >{{ item.titolo }}</h3>
-              <a :href="item.href">{{ item.nome }}</a>
-            </li>
-          </ul>
-          
-
+          <div class="margin-2rem">
+            <ul>
+              <li><h2>DC</h2></li>
+              <li v-for="(item, index) in DcArray" :key="index">
+                <a :href="item.href">{{ item.nome }}</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <ul>
+              <li><h2>Sites</h2></li>
+              <li v-for="(item, index) in SitesArray" :key="index">
+                <a :href="item.href">{{ item.nome }}</a>
+              </li>
+            </ul>
+          </div>
         </div>
         <div class="col-6">
           <img src="../assets/img/dc-logo-bg.png" alt="dc-logo">
@@ -181,13 +182,17 @@
           @include d-flex;
             li{
               margin:10px 5px;
-              h3{
+              h2{
                 color:$colorwhite;
+                margin-bottom: 1rem;
               }
               a{
                 color: #959595;
                 font-size: 14px;
               }
+            }
+            .margin-2rem{
+              margin:0rem 2rem;
             }
         }
         .col-6{
@@ -195,7 +200,10 @@
           flex-direction: row-reverse;
           width: 60%;
           img{
-            width: 60%;
+            width: 30%;
+            position: absolute;
+            bottom: 0px;
+            
           }
         }
       }

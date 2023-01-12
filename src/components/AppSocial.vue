@@ -59,6 +59,7 @@
     @use '../styles/partials/mixins' as *;
     .bk-grey{
         background-color: #303030;
+        position: relative;
         .row{
             @include d-flex;
             width: $width100;
