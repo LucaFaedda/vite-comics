@@ -1,6 +1,13 @@
 <script>
+  import CardDc from './CardDc.vue'
   export default {
-    name: 'AppContent'
+    CardDc,
+    name: 'AppContent',
+    data(){
+      return{
+
+      }
+    }
   }
 </script>
 <template lang="">
@@ -8,9 +15,11 @@
     <div class="jumbo">
 
     </div>
-    <div class="container">
-       
-
+    <div class="bk-black">
+      <div class="container">
+         <CardDc></CardDc>
+  
+      </div>
     </div>
     
   </div>
@@ -23,10 +32,13 @@
         justify-content: center;
         flex-direction: row;
         .jumbo{
-            height: 280px;
+            height: 400px;
             width: 100%;
             background-image: url("../assets/img/jumbotron.jpg");
             background-size: cover;
+        }
+        .bk-black{
+          background-color: #1c1c1c;
         }
     }
 

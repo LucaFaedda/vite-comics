@@ -314,7 +314,7 @@
           width: 60%;
           img{
             width: 30%;
-            position: absolute;
+            //position: absolute;
             bottom: 0px;
             
           }
