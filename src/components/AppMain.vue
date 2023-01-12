@@ -49,7 +49,7 @@
     </div>
     
 </template>
-<style lang="scss" scoped>
+<style lang="scss" >
     @use '../styles/partials/variabiles' as *;
     @use '../styles/partials/mixins' as *;
     .icons{

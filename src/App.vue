@@ -23,6 +23,6 @@ import AppSocial from './components/AppSocial.vue'
     <AppSocial></AppSocial>
   </div>
 </template>
-<style lang="scss" scoped>
+<style lang="scss" >
   @use './styles/generals.scss' as*;
 </style>
