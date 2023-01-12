@@ -22,7 +22,9 @@
       <div class="container">
         <div class="card-container">
           <CardDc v-for="(item, index) in comics" :key="index" :fumetto="item"></CardDc>
-
+        </div>
+        <div class="btn-content">
+          <button class="btn-primary"><h4>Load More</h4></button>
         </div>
       </div>
     </div>
@@ -46,6 +48,22 @@
             display: flex;
             flex-wrap: wrap;
             padding: 2rem;
+          }
+          .btn-content{
+            display: flex;
+            justify-content: center;
+            padding-bottom: 3rem;
+            .btn-primary{
+              padding: 10px 80px;
+              color: $colorwhite;
+              background-color: $primarycolor;
+              border: 1px solid transparent;
+              cursor: pointer;
+              &:hover{
+                background-color: #1c1c1c;
+                border: 1px solid $primarycolor;
+              }
+            }
           }
         }
     }
