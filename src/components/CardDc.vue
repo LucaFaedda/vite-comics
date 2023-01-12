@@ -10,7 +10,6 @@
     <div class="card">
             <div class="image-container">
                 <img :src="fumetto.thumb">
-
             </div>
             <h5 class="card-title">{{fumetto.series}}</h5>
     </div>

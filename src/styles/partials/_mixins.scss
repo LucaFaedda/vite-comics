@@ -6,3 +6,10 @@
     display: flex;
     align-items: center;
 }
+
+@mixin btn-primay {
+    padding: 10px 80px;
+    color: #ffff;
+    background-color: #0282f9;
+    border: 1px solid transparent;
+}
