@@ -47,6 +47,7 @@
             </ul>      
         </div>
     </div>
+    
 </template>
 <style lang="scss">
     @use '../styles/partials/variabiles' as *;
@@ -55,6 +56,7 @@
         @include d-flex;
         justify-content: space-around;
         background-color: #0282f9;
+        position: relative;
         .container{
             ul{
                 @include d-flex;
