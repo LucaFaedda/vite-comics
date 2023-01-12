@@ -302,6 +302,9 @@
               a{
                 color: #959595;
                 font-size: 14px;
+                &:hover{
+                  color: $colorwhite;
+                }
               }
             }
             .margin-2rem{

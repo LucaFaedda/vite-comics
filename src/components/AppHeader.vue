@@ -111,17 +111,21 @@
         ul{
           @include d-flex;
           height: 100%;
-          li a{
+          li{
+            height: 100%;
+            a{
             margin: 0rem 5px;
             height: 100%;
               &.active, &:hover{
                 color: $primarycolor;
               }
               &.active{
-              padding-bottom: 20px;
-              border-bottom: 3px solid;
+              padding-bottom: 64px;
+              border-bottom: 5px solid;
               border-spacing: 10px;
             }
+            
+          } 
           }
         }
       }
