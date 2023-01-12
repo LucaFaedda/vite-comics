@@ -5,10 +5,11 @@
 </script>
 <template lang="">
   <div class="content">
+    <div class="jumbo">
+
+    </div>
     <div class="container">
-        <h2 class="text-center">
-      Content goes here 
-        </h2>
+       
 
     </div>
     
@@ -18,14 +19,14 @@
     @use '../styles/partials/variabiles' as *;
     @use '../styles/partials/mixins' as *;
     .content{
-        height: 100px;
-        background-color: #1c1c1c;
         @include d-flex-center;
         justify-content: center;
         flex-direction: row;
-
-        .text-center{
-            color: #fff;
+        .jumbo{
+            height: 280px;
+            width: 100%;
+            background-image: url("../assets/img/jumbotron.jpg");
+            background-size: cover;
         }
     }
 

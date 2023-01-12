@@ -354,6 +354,9 @@
                     }
                     li{
                         margin:0.5rem;
+                        img:hover{
+                          filter: invert(100);
+                        }
                     }
                 }
             }
