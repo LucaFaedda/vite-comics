@@ -60,14 +60,9 @@
         }
       },
       methods: {
-        activeItem()
+        activeItem(index)
         {
-          if(stato == false){
-            stato == true
-          }
-          else{
-            stato == false
-          }
+          this.listaHeader[index].stato = !this.listaHeader[index].stato
         }
       },
   }
@@ -83,7 +78,7 @@
         <div class="col-6">
           <ul>
             <li v-for="(item, index) in listaHeader" :key="index">
-              <a :href="item.url" :class="item.stato ? 'active' : ''" @click="item.stato ? false : true">{{ item.nome }}</a>
+              <a :href="item.url" :class="item.stato ? 'active' : ''" @click="activeItem(index)">{{ item.nome }}</a>
             </li>
           </ul>
 

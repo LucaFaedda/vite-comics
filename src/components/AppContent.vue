@@ -1,11 +1,14 @@
 <script>
   import CardDc from './CardDc.vue'
+  import ArrayImageDc from '../assets/data/ArrayImageDc'
   export default {
-    CardDc,
+    components:{
+      CardDc,
+    },
     name: 'AppContent',
     data(){
       return{
-
+        comics: ArrayImageDc
       }
     }
   }
@@ -17,8 +20,10 @@
     </div>
     <div class="bk-black">
       <div class="container">
-         <CardDc></CardDc>
-  
+        <div class="card-container">
+          <CardDc v-for="(item, index) in comics" :key="index" :fumetto="item"></CardDc>
+
+        </div>
       </div>
     </div>
     
@@ -28,9 +33,7 @@
     @use '../styles/partials/variabiles' as *;
     @use '../styles/partials/mixins' as *;
     .content{
-        @include d-flex-center;
-        justify-content: center;
-        flex-direction: row;
+        
         .jumbo{
             height: 400px;
             width: 100%;
@@ -39,6 +42,10 @@
         }
         .bk-black{
           background-color: #1c1c1c;
+          .card-container{
+            display: flex;
+            flex-wrap: wrap;
+          }
         }
     }
 
