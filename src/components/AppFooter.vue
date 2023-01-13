@@ -215,9 +215,7 @@
             </ul>
           </div>
         </div>
-        <div class="col-6">
-          <img src="../assets/img/dc-logo-bg.png" alt="dc-logo">
-        </div>
+        
       </div>
       <div class="fine">
 
@@ -286,12 +284,17 @@
     footer{
       background-image: url('../assets/img/footer-bg.jpg');
       background-size: cover;
-      padding: 3rem 0rem;
+      
       .row{
         @include d-flex;
         width: $width100;
         .col-4{
-          width: 40%;
+          width: 100%;
+          background-image: url('../assets/img/dc-logo-bg.png');
+          background-position: right center;
+          background-repeat: no-repeat;
+          padding: 2rem 0rem;
+
           @include d-flex;
             li{
               margin:10px 5px;
@@ -311,19 +314,10 @@
               margin:0rem 2rem;
             }
         }
-        .col-6{
-          display: flex;
-          flex-direction: row-reverse;
-          width: 60%;
-          position: relative;
-          img{
-            position: absolute;
-            bottom: -85px;
-            
-          }
-        }
+        
       }
     }
+    
     .bk-grey{
         background-color: #303030;
         position: relative;
